@@ -11,13 +11,14 @@ class PembayaranKartu implements IPembayaran {
       this._tanggalPembayaran, this._status);
 
   @override
-  void prosesPembayaran() {
+  Future<void> prosesPembayaran() async {
     // ceritanya ada proses pembayaran pake kartu sekalian contoh
     // untuk implementasi polymorpism dimana method yang sama namun memiliki perbedaan
-    print(
-        "Memproses pembayaran sejumlah $_jumlah menggunakan kartu nomor $_nomorKartu");
+    print("Memproses pembayaran menggunakan kartu...");
+    print("\nsejumlah $_jumlah menggunakan kartu nomor $_nomorKartu");
     _status = "Berhasil";
-    print("Pembayaran berhasil!");
+    await Future.delayed(Duration(seconds: 2));
+    print("Pembayaran dengan kartu berhasil.");
   }
 
   String get id => _id;

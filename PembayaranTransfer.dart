@@ -11,10 +11,11 @@ class PembayaranTransfer implements IPembayaran {
       this._tanggalPembayaran, this._status);
 
   @override
-  void prosesPembayaran() {
+  Future<void> prosesPembayaran() async {
     print("Memproses transfer sejumlah $_jumlah ke bank $_bank");
+    await Future.delayed(Duration(seconds: 2));
     _status = "Berhasil";
-    print("Transfer berhasil!");
+    print("Pembayaran dengan kartu berhasil.");
   }
 
   String get id => _id;

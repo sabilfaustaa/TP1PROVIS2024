@@ -1,3 +1,3 @@
 abstract class IPembayaran {
-  void prosesPembayaran();
+  Future<void> prosesPembayaran();
 }

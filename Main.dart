@@ -171,7 +171,11 @@ void main() {
           }
 
           // proses pembayaran
-          pembayaran.prosesPembayaran();
+          Future<void> prosesPembayaranAsync() async {
+            await pembayaran.prosesPembayaran();
+          }
+
+          prosesPembayaranAsync();
 
           // membuat pesanan dan menambahkannya ke riwayat pengguna
           var pesanan = Pesanan(
