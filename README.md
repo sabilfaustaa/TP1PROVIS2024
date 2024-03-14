@@ -118,3 +118,7 @@ penggunaId: String
 rating: int
 komentar: String
 tanggal: DateTime
+
+## Penutup
+
+Terima kasih saya Muhamad Sabil Fausta dengan NIM 2210142 mohon maaf apabila terdapat kesalahan semoga bermanfaat
